@@ -1,0 +1,17 @@
+{
+  "name": "class-01---scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "myCostumScript": "node index.js",
+    "runTest": "long command to run all tests on the app",
+    "george-sass": "node-sass scss/style.scss css/style.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.3"
+  }
+}

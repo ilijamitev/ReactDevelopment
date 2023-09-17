@@ -1,0 +1,101 @@
+@import "variables";
+@import "functions";
+
+body {
+  background-color: rgb(167, 153, 153);
+  //   color: red;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Navigation with CSS way
+
+// .navigation {
+//   background-color: yellow;
+//   padding: 20px;
+// }
+
+// .navigation ul {
+//   list-style: none;
+//   display: flex;
+// }
+
+// .navigation li {
+//   text-align: center;
+//   margin-right: 1rem;
+// }
+
+// fontsize 10px = 1rem; 2rem = 20px
+
+// Navigation with SCSS way :)
+
+.navigation {
+  background-color: $yellowColor;
+  padding: 20px;
+
+  ul {
+    list-style: none;
+    display: flex;
+    :hover {
+      background-color: darken($color: $yellowColor, $amount: 20);
+    }
+  }
+
+  li {
+    cursor: pointer;
+    text-align: center;
+  }
+
+  li:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// CONTAINER
+
+.container {
+  padding: $default-spacing;
+
+  &-one {
+    // color: $font-color-2;
+    background-color: rgb(119, 119, 243);
+    color: textColor($font-color-2);
+
+    // Inherit with mixin :)
+    @include font(20px, bold, blue);
+    // Inherit/extend with %
+    @extend %card;
+  }
+
+  &-two {
+    color: textColor(red);
+    @include font(50px, bolder, yellow);
+    @extend %card;
+  }
+}
+
+// BEM
+
+.section {
+  &__msg {
+    font-size: 2rem;
+    &--error {
+      color: red;
+    }
+    &--success {
+      color: green;
+    }
+  }
+}

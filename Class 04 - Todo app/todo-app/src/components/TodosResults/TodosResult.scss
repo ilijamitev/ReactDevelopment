@@ -1,0 +1,23 @@
+.results {
+  margin-top: 2rem;
+
+  &__todo {
+    display: flex;
+    border-bottom: 1px solid gray;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    &--options {
+      display: flex;
+
+      :first-child {
+        margin-right: 5px;
+      }
+      > * {
+        border: 1px solid grey;
+        padding: 3px;
+        cursor: pointer;
+      }
+    }
+  }
+}

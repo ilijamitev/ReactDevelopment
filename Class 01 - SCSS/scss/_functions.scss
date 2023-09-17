@@ -1,0 +1,19 @@
+@function textColor($textcolor) {
+  @if (lightness($textcolor) > 50) {
+    @return darken($textcolor, 60);
+  } @else {
+    @return lighten($textcolor, 60);
+  }
+}
+
+// Ni ovozmozuva nasleduvanje/ INHERITANCE
+@mixin font($fontSize, $fontWeight, $fontColor) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  color: $fontColor;
+}
+
+//Extending/Inheritence
+%card {
+  width: 50%;
+}

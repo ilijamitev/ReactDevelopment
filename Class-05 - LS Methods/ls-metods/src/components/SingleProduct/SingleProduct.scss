@@ -1,0 +1,9 @@
+.product {
+  max-width: 300px;
+  border: 1px solid pink;
+
+  &__image {
+    width: 200px;
+    height: 200px;
+  }
+}
