@@ -1,0 +1,3 @@
+1) Read the docs starting from the README.md and follow the instructions
+
+2) Provide me a detailed plan (in form of .md file) of what are your further steps
